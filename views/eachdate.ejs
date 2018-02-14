@@ -3,9 +3,10 @@
    <head>
       <title><%= title %></title>
       <link rel='stylesheet' href='/stylesheets/style.css' />
+      <link rel='stylesheet' href='/stylesheets/viewer.min.css' />
    </head>
    <body>
-      <ul id=images>
+      <ul id="images">
          <% for (let i = 0; i < jpegArray.length; i++) { %>
          <% let imgPath = "../" + photoDir + "/" + jpegArray[i] %>
          <li>
@@ -14,5 +15,9 @@
          </li>
          <% } %>
       </ul>
+      <script src="/javascript/viewer.min.js"></script>
+      <script>
+         const viewer = new Viewer(document.getElementById('images'));
+      </script>
    </body>
 </html>
