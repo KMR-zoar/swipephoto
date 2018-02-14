@@ -5,9 +5,10 @@ const config = require('../config.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  let dirArray = getDir(config.photodir);
   res.render('index', {
     title: '日付を選択',
-    dirArray: getDir(config.photodir)
+    dirArray: dirArray
   });
 });
 
