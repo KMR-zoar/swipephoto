@@ -9,6 +9,8 @@ const index = require('./routes/index');
 const users = require('./routes/users');
 const eachDate = require('./routes/eachdate');
 
+const config = require('./config.json');
+
 const app = express();
 
 // view engine setup
@@ -22,6 +24,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/' + config.photodir, express.static(path.join(__dirname, config.photodir)))
 
 app.use('/', index);
 app.use('/users', users);

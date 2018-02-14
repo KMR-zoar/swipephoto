@@ -7,7 +7,11 @@
    <body>
       <ul id=images>
          <% for (let i = 0; i < jpegArray.length; i++) { %>
-         <li><%- jpegArray[i] %></li>
+         <% let imgPath = "../" + photoDir + "/" + jpegArray[i] %>
+         <li>
+            <img src="<%- imgPath %>" alt="<%- jpegArray[i] %>">
+            <%- imgPath %>
+         </li>
          <% } %>
       </ul>
    </body>

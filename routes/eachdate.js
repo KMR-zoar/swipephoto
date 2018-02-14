@@ -6,9 +6,11 @@ const path = require('path');
 
 router.get('/:date', function(req, res, next) {
    let date = req.params.date;
-   let jpegArray = getJpeg(path.join(config.photodir, date));
+   const photoDir = path.join(config.photodir, date);
+   let jpegArray = getJpeg(photoDir);
    res.render('eachdate', {
      title: '画像確認ページ',
+     photoDir: photoDir,
      jpegArray: jpegArray
    });
  });
