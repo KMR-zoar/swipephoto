@@ -1,10 +1,10 @@
-var fs = require('fs');
-var path = require('path');
-var async = require('async');
+const fs = require('fs');
+const path = require('path');
+const async = require('async');
 
 dirArray = (targetDir) => {
-   var resultDirArray = [];
-   var fsObjArray = fs.readdirSync(targetDir);
+   let resultDirArray = [];
+   let fsObjArray = fs.readdirSync(targetDir);
    async.forEach(fsObjArray, (file) => {
       if (fs.statSync(path.join(targetDir, file)).isDirectory()) {
          resultDirArray.push(file);
