@@ -6,7 +6,6 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 const index = require('./routes/index');
-const users = require('./routes/users');
 const eachDate = require('./routes/eachdate');
 
 const config = require('./config.json');
@@ -27,7 +26,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/' + config.photodir, express.static(path.join(__dirname, config.photodir)))
 
 app.use('/', index);
-app.use('/users', users);
 app.use('/eachdate', eachDate);
 
 
