@@ -10,8 +10,10 @@
          <% for (let i = 0; i < jpegArray.length; i++) { %>
          <% let imgPath = "../" + photoDir + "/" + jpegArray[i] %>
          <li>
-            <img src="<%- imgPath %>" alt="<%- jpegArray[i] %>">
-            <%- imgPath %>
+            <figure>
+               <img src="<%- imgPath %>" alt="<%- jpegArray[i] %>">
+               <figcaption><%- jpegArray[i] %></figcaption>
+            </figure>
          </li>
          <% } %>
       </ul>
