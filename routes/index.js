@@ -6,7 +6,7 @@ const config = require('../config.json');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {
-    title: '画像確認ページ',
+    title: '日付を選択',
     dirArray: getDir(config.photodir)
   });
 });
