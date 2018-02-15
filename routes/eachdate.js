@@ -5,7 +5,7 @@ const config = require('../config.json');
 const path = require('path');
 const paginate = require('../modules/paginate');
 
-const limit = 5;
+const limit = config.pagelimit;
 
 router.get('/:date', function(req, res, next) {
    let page = req.query.page;
