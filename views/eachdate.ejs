@@ -8,6 +8,13 @@
    </head>
    <body>
       <a href="/" class="back">日付一覧に戻る</a>
+      <% for (let p = 1; p < maxPage + 1; p++) { %>
+      <% if (page != p) { %>
+      <a href="?page=<%- p %>"><%- p %></a>
+      <% } else { %>
+      <%- p %>
+      <% } %>
+      <% } %>
       <ul id="images">
          <% for (let i = 0; i < jpegArray.length; i++) { %>
          <% let imgPath = "../" + photoDir + "/" + jpegArray[i] %>
