@@ -7,6 +7,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
    </head>
    <body>
+      <div>
       <a href="/" class="back">日付一覧に戻る</a>
       <% for (let p = 1; p < maxPage + 1; p++) { %>
       <% if (page != p) { %>
@@ -26,9 +27,19 @@
          </li>
          <% } %>
       </ul>
+      <a href="/" class="back">日付一覧に戻る</a>
+      <% for (let p = 1; p < maxPage + 1; p++) { %>
+      <% if (page != p) { %>
+      <a href="?page=<%- p %>"><%- p %></a>
+      <% } else { %>
+      <%- p %>
+      <% } %>
+      <% } %>
+      </div>
       <script src="/javascript/viewer.min.js"></script>
       <script>
          const viewer = new Viewer(document.getElementById('images'));
       </script>
+      
    </body>
 </html>
