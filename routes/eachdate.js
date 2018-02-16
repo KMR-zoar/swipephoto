@@ -8,7 +8,12 @@ const paginate = require('../modules/paginate');
 const limit = config.pagelimit;
 
 router.get('/:date', function(req, res, next) {
-   let page = req.query.page;
+   let page;
+   if (req.query.page) {
+      page = req.query.page;
+   } else {
+      page = 1;
+   }
    let date = req.params.date;
 
    const photoDir = path.join(config.photodir, date);
