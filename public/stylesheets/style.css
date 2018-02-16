@@ -32,3 +32,16 @@ figure img {
 figcaption {
   text-align: center;
 }
+
+.pagebuttom {
+   display: inline-block;
+   margin: 0% .25%;
+   border: #00B7FF 1px solid;
+   border-radius: 4px;
+   width: 2em;
+   text-align: center;
+}
+
+.pagebuttom.active {
+   font-weight: bold;
+}
