@@ -20,7 +20,7 @@
          </span>
          <% } %>
          <% } %>
-         <form method="post" id="posttoslack">
+         <form method="post" class="posttoslack">
             <input type="hidden" name="dirname" value="<%- photoDir %>">
             <button type="submit">この日は見た</button>
          </form>
@@ -47,6 +47,10 @@
          </span>
          <% } %>
          <% } %>
+         <form method="post" class="posttoslack">
+            <input type="hidden" name="dirname" value="<%- photoDir %>">
+            <button type="submit">この日は見た</button>
+         </form>
       </div>
       <script src="/javascript/viewer.min.js"></script>
       <script>
