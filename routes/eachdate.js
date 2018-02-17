@@ -32,6 +32,7 @@ router.get('/:date', (req, res, next) => {
 
  router.post('/:date', (req, res, next) => {
    postToSlack(req.body.dirname + " を見ました｡");
+   res.redirect('/');
  });
 
  module.exports = router;
