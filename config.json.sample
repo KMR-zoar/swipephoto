@@ -3,5 +3,6 @@
    "pagelimit": ,
    "slack_token": "",
    "slack_icon_url": "",
-   "slack_channel": ""
+   "slack_channel": "",
+   "slack_username": ""
 }

@@ -6,7 +6,8 @@ let postToSlack = (message) =>{
       token : config.slack_token,
       channel: config.slack_channel,
       text : message,
-      icon_url: config.slack_icon_url
+      icon_url: config.slack_icon_url,
+      username: config.slack_username
    };
    request.post(
       'https://slack.com/api/chat.postMessage',
