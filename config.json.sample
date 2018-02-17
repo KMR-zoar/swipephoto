@@ -1,5 +1,7 @@
 {
    "photodir": "",
    "pagelimit": ,
-   "token": ""
+   "slack_token": "",
+   "slack_icon_url": "",
+   "slack_channel": ""
 }
