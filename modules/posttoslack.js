@@ -13,7 +13,7 @@ let postToSlack = (message) =>{
       {
          form: options
       }, (err, res, body) => {
-         console.log(err);
+         if (err) throw err;
       }
    );
 }

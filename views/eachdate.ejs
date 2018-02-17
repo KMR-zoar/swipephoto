@@ -20,6 +20,10 @@
          </span>
          <% } %>
          <% } %>
+         <form method="post">
+            <input type="hidden" name="dirname" value="<%- photoDir %>">
+            <button type="submit">この日は見た</button>
+         </form>
          <ul id="images">
             <% for (let i = 0; i < jpegArray.length; i++) { %>
             <% let imgPath = "../" + photoDir + "/" + jpegArray[i] %>
@@ -48,6 +52,6 @@
       <script>
          const viewer = new Viewer(document.getElementById('images'));
       </script>
-      
+
    </body>
 </html>

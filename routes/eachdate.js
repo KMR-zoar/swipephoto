@@ -4,10 +4,11 @@ const getJpeg = require('../modules/getjpeg');
 const config = require('../config.json');
 const path = require('path');
 const paginate = require('../modules/paginate');
+const postToSlack = require('../modules/posttoslack');
 
 const limit = config.pagelimit;
 
-router.get('/:date', function(req, res, next) {
+router.get('/:date', (req, res, next) => {
    let page;
    if (req.query.page) {
       page = req.query.page;
@@ -28,6 +29,9 @@ router.get('/:date', function(req, res, next) {
      page: page
    });
  });
- 
+
+ router.post('/:date', (req, res, next) => {
+   postToSlack(req.body.dirname + " を見ました｡");
+ });
+
  module.exports = router;
- 
