@@ -16,17 +16,23 @@ ul#dateArray li {
    height: 2em;
 }
 
-ul#images li { 
+ul#images {
+  width: 93%;
+  padding: 0%;
+  margin: 0% 3%;
+}
+
+ul#images li {
   display: inline-block;
-  margin: 0px 3xp 7px 0px;
-  background-color: #ccc;
+  margin: 0px 3px 7px 0px;
+  background-color: #aae6fd;
+  width: 49%;
 }
 
 figure img {
   display: block;
   margin: 0px 0px 3px 0px;
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 100%;
 }
 
 figcaption {
@@ -44,4 +50,8 @@ figcaption {
 
 .pagebuttom.active {
    font-weight: bold;
+}
+
+#posttoslack {
+  display: inline-block;
 }
