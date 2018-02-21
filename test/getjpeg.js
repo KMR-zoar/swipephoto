@@ -1,4 +1,4 @@
-
+const modules = require('../modules/getjpeg');
 const assert = require('assert');
 
 describe("GetJpegFileArray",() => {
