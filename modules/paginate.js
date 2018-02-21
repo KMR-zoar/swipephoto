@@ -1,8 +1,13 @@
-let paginate = (TargetArray, limit, page) => {
+paginate = (TargetArray, limit, page) => {
    let itemCount = TargetArray.length;
    const pageCount = Math.ceil(itemCount / limit);
    if (pageCount < page) {
-      return "false";
+      const largeerObj = {
+         array: TargetArray,
+         maxPage: pageCount,
+         page: pageCount
+      }
+      return largeerObj;
    }
    let start = (page  - 1) * limit;
    let end = start + limit;
